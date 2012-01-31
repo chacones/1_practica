@@ -12,8 +12,9 @@ private:
 public:
   Parking();
   ~Parking();
-  void meter_coche(int num_plazas);
-  void sacar_coche(int num_plazas);
+  void meter_coche();
+  void sacar_coche();
   int get_plazas_libres();
+  void leer_parking();
 
 };

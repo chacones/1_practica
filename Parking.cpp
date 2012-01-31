@@ -4,7 +4,7 @@ Parking::Parking() {}
 
 Parking::~Parking() {}
 
-void Parking::meter_coche(int num_plazas) {
+void Parking::meter_coche() {
   Coche c;
   c.leer_coche();
   list<Coche>::iterator it = aparcamiento.begin();   
@@ -12,23 +12,26 @@ void Parking::meter_coche(int num_plazas) {
   plazas_libres--;
 }
 
-void Parking::sacar_coche(int num_plazas) {
+void Parking::sacar_coche() {
   Coche c;
   c.leer_coche();
   list<Coche>::iterator it = aparcamiento.begin();   
   bool trobat = false;
   while(it != aparcamiento.end() and not trobat) {
     Coche aux = *it;
-    if(c.get_matricula() == it.get_matricula()) {
+    if(c.get_matricula() == aux.get_matricula()) {
       aparcamiento.erase(it);
       plazas_libres++;
       trobat = true;
     } 
-    ++it;
-    
+    ++it;    
   }
 }
 
 int Parking::get_plazas_libres() {
-  return plazas libres;
+  return plazas_libres;
+}
+
+void Parking::leer_parking() {
+  cin >> plazas_libres;
 }
