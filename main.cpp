@@ -19,8 +19,20 @@ int main() {
     else if(tarea == 2) {
       p.sacar_coche();
     }
-    else {
+    else if(tarea == 3) {
       cout << p.get_plazas_libres() << endl;
+    }
+    else if(tarea == 4) {
+
+    }
+    else if(tarea == 5) {
+
+    }
+    else if(tarea == 6) {
+
+    }
+    else if(tarea == 7) {
+      
     }
   }
 }

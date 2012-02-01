@@ -5,11 +5,17 @@ class Coche {
 
 private:
   int matricula;
+  int hora_entrada, hora_salida;
+  int ingresos;
 
 public:
   Coche();
   ~Coche();
   int get_matricula();
-  void leer_coche();
+  int get_hora_entrada();
+  int get_hora_salida();
+  void leer_coche_entrada();
+  void leer_coche_salida();
 
 };
+
