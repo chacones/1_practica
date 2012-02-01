@@ -33,6 +33,13 @@ void Parking::sacar_coche() {
     } 
     ++it;    
   }
+  if(trobat and not cola_entrada.empty()) { 
+    c = cola_entrada.front();
+    cola_entrada.pop();
+    list<Coche>::iterator it = aparcamiento.begin();   
+    aparcamiento.insert(it,c);
+    plazas_libres--;
+  }
 }
 
 int Parking::get_plazas_libres() {
@@ -45,14 +52,23 @@ int Parking::get_precio() {
 
 
 void Parking::leer_parking() {
-  cin >> precio >> plazas_libres;
+  cin >> plazas_libres >> precio;
 }
 
 
 void Parking::imprimir() {
+  cout << "IMPRIMIR PARKING: " << endl;
   list<Coche>::iterator it = aparcamiento.begin();   
   while(it != aparcamiento.end()) {
     cout << (*it).get_matricula() << endl;
     ++it;
   }
+  cout << endl << "IMPRIMIR COLA: " << endl;
+  Coche c;
+  while (not cola_entrada.empty()) {
+    c = cola_entrada.front();
+    cout << c.get_matricula() << endl;
+    cola_entrada.pop();
+  }
+  cout << endl;
 }
