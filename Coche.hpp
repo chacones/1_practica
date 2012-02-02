@@ -6,7 +6,6 @@ class Coche {
 private:
   int matricula;
   int hora_entrada, hora_salida;
-  int ingresos;
 
 public:
   Coche();
@@ -16,6 +15,6 @@ public:
   int get_hora_salida();
   void leer_coche_entrada();
   void leer_coche_salida();
-
+  void imprimir_coche();
 };
 

@@ -22,3 +22,8 @@ void Coche::leer_coche_entrada() {
 void Coche::leer_coche_salida() {
   cin >> matricula >> hora_salida;
 }
+
+void Coche::imprimir_coche() {
+  cout << matricula << "  " << hora_entrada << "  ";
+  cout << hora_salida << endl;
+}
