@@ -23,17 +23,17 @@ int main() {
       cout << p.get_plazas_libres() << endl;
     }
     else if(tarea == 4) {
-
+      cout << p.get_ingresos() << endl;
     }
     else if(tarea == 5) {
-
+      cout << p.get_ingresos_diario() << endl;
     }
     else if(tarea == 6) {
-
+      cout << p.get_max_ingreso() << endl;
     }
     else if(tarea == 7) {
-      
+      p.siguiente_dia();
     }
   }
-  p.imprimir();
+  //p.imprimir();
 }

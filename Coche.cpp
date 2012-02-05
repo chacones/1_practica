@@ -8,22 +8,11 @@ int Coche::get_matricula() {
   return matricula;
 }
 
-int Coche::get_hora_entrada() {
-  return hora_entrada;
-}
-int Coche::get_hora_salida() {
-  return hora_salida;
+void Coche::leer_coche() {
+  cin >> matricula;
 }
 
-void Coche::leer_coche_entrada() {
-  cin >> matricula >> hora_entrada;
-}
-
-void Coche::leer_coche_salida() {
-  cin >> matricula >> hora_salida;
-}
 
 void Coche::imprimir_coche() {
-  cout << matricula << "  " << hora_entrada << "  ";
-  cout << hora_salida << endl;
+  cout << matricula << endl;
 }
